@@ -1,6 +1,6 @@
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {}
+// function renderLicenseLink(license) {}
 
 
 
@@ -51,6 +51,7 @@ questions
         },
     ])
 
+
 // TODO: Create a function to write README file
 .then((response) => {
     console.log(response);
@@ -58,7 +59,7 @@ questions
 })
 
 function writeToFile(fileName, response) {
-    fs.writeFile(fileName, JSON.stringify(response), null,'\t', (error) => {
+    fs.writeFile(fileName, JSON.stringify(response), null, (error) => {
     error ? console.error(error) : console.log('Great, thank you!')
     })
 
@@ -81,9 +82,8 @@ function writeToFile(fileName, response) {
 
 // TODO: Create a function to initialize app
 function init() {
+    
 }
 
 // Function call to initialize app
 init();
-
-
