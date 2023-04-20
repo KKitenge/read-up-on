@@ -1,1 +1,0 @@
-{"title":"a","description":"b","contents":"c","installation":"d","usage":"e","credits":"f","license":"g","status":"h"}

@@ -1,11 +1,8 @@
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-// function renderLicenseLink(license) {}
 
-
-
+//TODO: Include packages needed for this application
 const questions = require('inquirer');
 const fs = require('fs');
+const generateMarkdown = require('./utils/generateMarkdown');
 
 questions
     .prompt([
@@ -52,37 +49,27 @@ questions
     ])
 
 
-// TODO: Create a function to write README file
-.then((response) => {
-    console.log(response);
-    writeToFile('README2.md', response)
-})
+    // TODO: Create a function to write README file
+    .then((response) => {
+        console.log(response);
+        writeToFile('README2.md', response)
+    })
 
 function writeToFile(fileName, response) {
     fs.writeFile(fileName, JSON.stringify(response), null, (error) => {
-    error ? console.error(error) : console.log('Great, thank you!')
+        error ? console.error(error) : console.log('Great, thank you!')
     })
-
-    const string = 
-    `# ${response.title}
-    
-    ## ${response.description}
-    
-    ## ${response.contents}
-    
-    ## ${response.installation}
-    
-    ## ${response.usage}
-    
-    ## ${response.credits}
-    
-    ## ${response.license}`
-}
+};
 
 
 // TODO: Create a function to initialize app
 function init() {
-    
+    questions.prompt(questions)
+    .then((response) => {
+        console.log(response);
+        const markdownData = generateMarkdown(response);
+        writeToFile('README2.md', markdownData)
+    })
 }
 
 // Function call to initialize app
