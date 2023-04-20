@@ -1,34 +1,63 @@
-const questions = require('inquirer');
+const inquirer = require('inquirer');
 const fs = require('fs');
+const path = require('path') //a built in method, platform path.
+
+// TODO: Create a function that returns a license badge based on which license is passed in
+// If there is no license, return an empty string
+// A short list of 4
+//case sensitive
+function renderLicenseBadge(license) { 
+    if (license === 'MIT') {
+        return `https://shields.io/badge/license-MIT-green`//link to direct MIT logo
+    }   else if (license === 'Apache') {
+
+        return `https://shields.io/badge/license-Apache-blue`
+    }
+}
+
+// TODO: Create a function that returns the license link
+// If there is no license, return an empty string
+function renderLicenseLink(license) {
+}
+
+// TODO: Create a function that returns the license section of README
+// If there is no license, return an empty string
+function renderLicenseSection(license) {
+}
+
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(response) {
     return `
-    # ${response.title}
+#  ${response.title}   
   
-    ${renderLicenseSection(response.license)}
+    ${renderLicenseBadge(response.license)}
   
-    ## Description 
+## Description 
     ${response.description}
   
-    ## Table of Contents (Optional) 
+## Table of Contents (Optional) 
     ${response.contents}
+- * [Installation](#installation)
+- * [Usage](#usage)
+- * [Credits](#credits)
+- * [License](#license)
   
-    ## Installation 
+## Installation 
     ${response.installation}
   
-    ## Usage 
+## Usage 
     ${response.usage}
   
-    ## Credits 
+## Credits 
     ${response.credits}
   
-    ## License 
+## License 
     ${response.license}`
   };
 
-questions
-    .prompt([
+const questions =
+    [
         {
             type: 'input',
             name: 'title',
@@ -65,27 +94,31 @@ questions
             message: 'License Information',
         },
         {
-            type: 'input',
+            type: 'input', //type list, to give choices
             name: 'status',
             message: 'Project Status',
         },
-    ])
+    ]
 
 // TODO: Create a function to write README file
-.then((response) => {
-    console.log(response);
-    writeToFile('README2.md', response)
-})
+// .then((response) => {
+//     console.log(response);
+//     writeToFile('README2.md', response)
+// })
 
 function writeToFile(fileName, response) {
-    fs.writeFile(fileName, JSON.stringify(response), null, (error) => {
-    error ? console.error(error) : console.log('Great, thank you!')
-    })   
-}
+    return fs.writeFileSync(path.join(process.cwd(), fileName), response);
+  }
+    
 
 // TODO: Create a function to initialize app
 function init() {
-}
+    inquirer.prompt(questions).then((inquirerResponses) => {
+      console.log('Generating README...');
+      writeToFile('README2.md', generateMarkdown({ ...inquirerResponses }));
+    });
+  }
+  
 
 // Function call to initialize app
 init();
