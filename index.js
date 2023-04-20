@@ -71,12 +71,11 @@ questions
         },
     ])
 
-
-    // TODO: Create a function to write README file
-    .then((response) => {
-        console.log(response);
-        writeToFile('README2.md', response)
-    })
+// TODO: Create a function to write README file
+.then((response) => {
+    console.log(response);
+    writeToFile('README2.md', response)
+})
 
 function writeToFile(fileName, response) {
     fs.writeFile(fileName, JSON.stringify(response), null, (error) => {
@@ -86,12 +85,6 @@ function writeToFile(fileName, response) {
 
 // TODO: Create a function to initialize app
 function init() {
-    questions.prompt(questions)
-    .then((response) => {
-        console.log(response);
-        const markdownData = generateMarkdown(response);
-        writeToFile('README2.md', markdownData)
-    })
 }
 
 // Function call to initialize app
