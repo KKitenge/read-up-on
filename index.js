@@ -89,12 +89,15 @@ const questions =
             message: 'An area to list tech, collaborators, 3rd party assets.',
         },
         {
-            type: 'input',
+            type: 'checkbox', //type list, to give choices
             name: 'license',
-            message: 'License Information',
+            message: 'Which license are you using?',
+            choices: [
+                'MIT', 'Apache', 'Mozilla', 'Eclipse',
+            ],
         },
         {
-            type: 'input', //type list, to give choices
+            type: 'list', 
             name: 'status',
             message: 'Project Status',
         },
