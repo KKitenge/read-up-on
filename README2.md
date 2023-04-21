@@ -19,26 +19,27 @@ Project Description
 * [License](#license)
   
 ## Installation 
-Project Install
+Project Installation
   
 ## Usage 
-Project Use
+Project Usage
 
 ## Tests 
-Projects Tests
+Project Tests
   
 ## Credits 
 Project Tech
 
 ## Contributors 
-Project Contributors
+Project Collabs
 
 ## Status
 Project Status
 
 ## Questions
 For more information or if you have questions:
-* [Email](mailto:ProjectEmail)
-* [GitHub](https://github.com/ProjectUsername)
-  
+* [Email](mailto:Email)
+* [GitHub](https://github.com/Username)
+ 
+## License
 ## License MIT

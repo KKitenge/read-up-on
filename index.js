@@ -85,7 +85,8 @@ ${response.status}
 For more information or if you have questions:
 * [Email](mailto:${response.email})
 * [GitHub](https://github.com/${response.gitprofile})
-  
+ 
+## License
 ${renderLicenseSection(response.license)}`
 };
 
