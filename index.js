@@ -69,7 +69,7 @@ ${response.installation}
 ## Usage 
 ${response.usage}
 
-## :black_nib: Tests 
+## Tests 
 ${response.tests}
   
 ## Credits 

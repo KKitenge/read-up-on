@@ -24,7 +24,7 @@ Project Install
 ## Usage 
 Project Use
 
-## :black_nib: Tests 
+## Tests 
 Projects Tests
   
 ## Credits 
