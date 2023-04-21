@@ -17,7 +17,13 @@ function renderLicenseBadge(license) {
     //     return `![License](https://img.shields.io/badge/License-EPL%201.0-red.svg)](https://opensource.org/licenses/EPL-1.0)`;
     // }
     if (license === 'MIT') {
-        return
+        return `https://img.shields.io/badge/license-${license}-yellow`
+    }   else if (license === 'Apache') {
+        return `https://img.shields.io/badge/license-${license}-blue`
+    }   else if (license === 'Mozilla') {
+        return `https://img.shields.io/badge/license-${license}-brightgreen`
+    }   else if (license === 'Eclipse') {
+        return `https://img.shields.io/badge/license-${license}-red`
     }
 }
 
