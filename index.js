@@ -70,7 +70,7 @@ ${renderLicenseLink(response.license)}
 ## Usage 💻
     ${response.usage}
 
-## Tests
+## Tests ✍️
     ${response.tests}
   
 ## Credits 🎞️
