@@ -7,23 +7,14 @@ const path = require('path') //a built in method, platform path.
 // A short list of 4
 //case sensitive
 function renderLicenseBadge(license) {
-    // if (license === 'MIT') {
-    //     return `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`;//link to direct MIT logo
-    // } else if (license === 'Apache') {
-    //     return `[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`;
-    // } else if (license === 'Mozilla') {
-    //     return `[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0`;
-    // } else {
-    //     return `![License](https://img.shields.io/badge/License-EPL%201.0-red.svg)](https://opensource.org/licenses/EPL-1.0)`;
-    // }
     if (license === 'MIT') {
-        return `![MIT](https://img.shields.io/badge/license-${license}-yellow)`
-    }   else if (license === 'Apache') {
-        return `https://img.shields.io/badge/license-${license}-blue`
-    }   else if (license === 'Mozilla') {
-        return `https://img.shields.io/badge/license-${license}-brightgreen`
-    }   else if (license === 'Eclipse') {
-        return `https://img.shields.io/badge/license-${license}-red`
+        return `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`;//link to direct MIT logo
+    } else if (license === 'Apache') {
+        return `[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`;
+    } else if (license === 'Mozilla') {
+        return `[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0`;
+    } else {
+        return `![License](https://img.shields.io/badge/License-EPL%201.0-red.svg)](https://opensource.org/licenses/EPL-1.0)`;
     }
 }
 
@@ -33,7 +24,7 @@ function renderLicenseLink(license) {
     if (license === 'none') {
         return "";
     } else {
-        return `https://opensource.org/licenses/${license}`;
+        return `https://opensource.org/licenses/`;
     }
 }
 
@@ -50,10 +41,10 @@ function generateMarkdown(response) {
   
     ${renderLicenseBadge(response.license)}
   
-## Description 
+## Description 📖
     ${response.description}
   
-## Table of Contents (Optional) 
+## Table of Contents 📜  
     ${response.contents}
 * [Installation](#installation)
 * [Usage](#usage)
@@ -61,19 +52,19 @@ function generateMarkdown(response) {
 * [Contributors](#ontibutors)
 * [License](#license)
   
-## Installation 
+## Installation 💾
     ${response.installation}
   
-## Usage 
+## Usage 💻
     ${response.usage}
   
-## Credits 
+## Credits 🎞️
     ${response.credits}
 
-## Contributors
+## Contributors 👯
     ${response.contributors}
   
-## License 
+## License 🖋️
     ${response.license}`
 };
 
@@ -119,7 +110,6 @@ const questions =
             name: 'license',
             message: 'Which license are you using?',
             choices: ['MIT', 'Apache', 'Mozilla', 'Eclipse'],
-            default: 'MIT',
         },
         {
             type: 'input',
