@@ -13,24 +13,32 @@ function renderLicenseBadge(license) {
         return `[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`;
     } else if (license === 'Mozilla') {
         return `[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0`;
-    } else {
-        return `![License](https://img.shields.io/badge/License-EPL%201.0-red.svg)](https://opensource.org/licenses/EPL-1.0)`;
+    } else if ( license === 'Eclipse') {
+        return `[![License](https://img.shields.io/badge/License-EPL%201.0-red.svg)](https://opensource.org/licenses/EPL-1.0)`;
+    } else if(license === 'None') {
+        return "";
     }
 }
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
-    if (license === 'none') {
+    if (license === 'None') {
         return "";
     } else {
-        return `https://opensource.org/licenses/`;
+        return `* [License](#license)`;
     }
 }
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {    
+function renderLicenseSection(license) {  
+    if (license === 'None') {
+        return ""; 
+    }  else {
+        return `## License 🖋️
+        ${license}`
+    }
 }
 
 
@@ -39,7 +47,7 @@ function generateMarkdown(response) {
     return `
 #  ${response.title}   
   
-    ${renderLicenseBadge(response.license)}
+${renderLicenseBadge(response.license)}
   
 ## Description 📖
     ${response.description}
@@ -49,8 +57,8 @@ function generateMarkdown(response) {
 * [Installation](#installation)
 * [Usage](#usage)
 * [Credits](#credits)
-* [Contributors](#ontibutors)
-* [License](#license)
+* [Contributors](#contibutors)
+${renderLicenseLink(response.license)}
   
 ## Installation 💾
     ${response.installation}
@@ -67,8 +75,7 @@ function generateMarkdown(response) {
 ## Status
     ${response.status}
   
-## License 🖋️
-    ${response.license}`
+${renderLicenseSection(response.license)}`
 };
 
 const questions =
@@ -112,7 +119,7 @@ const questions =
             type: 'list', //type list, to give choices
             name: 'license',
             message: 'Which license are you using?',
-            choices: ['MIT', 'Apache', 'Mozilla', 'Eclipse'],
+            choices: ['MIT', 'Apache', 'Mozilla', 'Eclipse', 'None'],
         },
         {
             type: 'input',
