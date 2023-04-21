@@ -7,16 +7,14 @@
     This is the Description
   
 ## Table of Contents 📜  
-
-
-* [Installation](#installation)
-* [Usage](#usage)
-* [Tests](#tests)
-* [Credits](#credits)
-* [Contributors](#contributors)
+* [Installation](#installation-💾)
+* [Usage](#usage-💻)
+* [Tests](#tests-✍️)
+* [Credits](#credits-🎞️)
+* [Contributors](#contributors-👯)
 * [Status](#status)
 * [Questions](#questions)
-* [License](#license)
+* [License](#license-🖋️)
   
 ## Installation 💾
     This is how you Install
