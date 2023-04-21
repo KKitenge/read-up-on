@@ -53,11 +53,14 @@ ${renderLicenseBadge(response.license)}
     ${response.description}
   
 ## Table of Contents 📜  
-    ${response.contents}
+${response.contents}
 * [Installation](#installation)
 * [Usage](#usage)
+* [Tests](#tests)
 * [Credits](#credits)
-* [Contributors](#contibutors)
+* [Contributors](#contributors)
+* [Status](#status)
+* [Questions](#questions)
 ${renderLicenseLink(response.license)}
   
 ## Installation 💾
@@ -65,6 +68,8 @@ ${renderLicenseLink(response.license)}
   
 ## Usage 💻
     ${response.usage}
+
+## Tests
   
 ## Credits 🎞️
     ${response.credits}
@@ -74,6 +79,11 @@ ${renderLicenseLink(response.license)}
 
 ## Status
     ${response.status}
+
+## Questions
+For more information or if you have questions:
+* [Email](mailto:${response.email})
+* [GitHub](https://github.com/${response.github})
   
 ${renderLicenseSection(response.license)}`
 };
@@ -107,13 +117,28 @@ const questions =
         },
         {
             type: 'input',
+            name: 'tests',
+            message: 'Tests...'
+        },
+        {
+            type: 'input',
             name: 'credits',
-            message: 'An area to list tech, collaborators, 3rd party assets.',
+            message: 'An area to list tech, collaborators, 3rd party assets:',
         },
         {
             type: 'input',
             name: 'contributors',
             message: 'Contributors',
+        },
+        {
+            type: 'input',
+            name: 'gitprofile',
+            message: 'Enter your GitHub username:',
+        },
+        {
+            type: 'input',
+            name: 'email',
+            message: 'Enter your email address:',
         },
         {
             type: 'list', //type list, to give choices
@@ -124,7 +149,7 @@ const questions =
         {
             type: 'input',
             name: 'status',
-            message: 'Project Status',
+            message: 'Project Status:',
         },
     ]
 
