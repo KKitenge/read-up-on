@@ -36,8 +36,7 @@ function renderLicenseSection(license) {
     if (license === 'None') {
         return ""; 
     }  else {
-        return `## License 🖋️
-        ${license}`
+        return `## License ${license}`
     }
 }
 
@@ -49,10 +48,10 @@ function generateMarkdown(response) {
   
 ${renderLicenseBadge(response.license)}
   
-## Description 📖
-    ${response.description}
+## Description
+${response.description}
   
-## Table of Contents 📜  
+## Table of Contents   
 ${response.contents}
 
 * [Installation](#installation)
@@ -64,23 +63,23 @@ ${response.contents}
 * [Questions](#questions)
 ${renderLicenseLink(response.license)}
   
-## Installation 💾
-    ${response.installation}
+## Installation 
+${response.installation}
   
-## Usage 💻
-    ${response.usage}
+## Usage 
+${response.usage}
 
-## Tests ✍️
-    ${response.tests}
+## :black_nib: Tests 
+${response.tests}
   
-## Credits 🎞️
-    ${response.credits}
+## Credits 
+${response.credits}
 
-## Contributors 👯
-    ${response.contributors}
+## Contributors 
+${response.contributors}
 
 ## Status
-    ${response.status}
+${response.status}
 
 ## Questions
 For more information or if you have questions:

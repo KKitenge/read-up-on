@@ -1,43 +1,44 @@
 
-#  This is the Title   
+#  Project Title   
   
-[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
   
-## Description 📖
-    This is the Description
+## Description
+Project Description
   
-## Table of Contents 📜  
-* [Installation](#installation-💾)
-* [Usage](#usage-💻)
-* [Tests](#tests-✍️)
-* [Credits](#credits-🎞️)
-* [Contributors](#contributors-👯)
+## Table of Contents   
+
+
+* [Installation](#installation)
+* [Usage](#usage)
+* [Tests](#tests)
+* [Credits](#credits)
+* [Contributors](#contributors)
 * [Status](#status)
 * [Questions](#questions)
-* [License](#license-🖋️)
+* [License](#license)
   
-## Installation 💾
-    This is how you Install
+## Installation 
+Project Install
   
-## Usage 💻
-    This is how you Use
+## Usage 
+Project Use
 
-## Tests ✍️
-    Tests
+## :black_nib: Tests 
+Projects Tests
   
-## Credits 🎞️
-    Tech and stuff
+## Credits 
+Project Tech
 
-## Contributors 👯
-    Contributors
+## Contributors 
+Project Contributors
 
 ## Status
-    Status
+Project Status
 
 ## Questions
 For more information or if you have questions:
-* [Email](mailto:emailaddress)
-* [GitHub](https://github.com/username)
+* [Email](mailto:ProjectEmail)
+* [GitHub](https://github.com/ProjectUsername)
   
-## License 🖋️
-        Mozilla
+## License MIT
