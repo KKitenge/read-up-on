@@ -71,6 +71,7 @@ ${renderLicenseLink(response.license)}
     ${response.usage}
 
 ## Tests
+    ${response.tests}
   
 ## Credits 🎞️
     ${response.credits}
