@@ -125,12 +125,12 @@ const questions =
         {
             type: 'input',
             name: 'credits',
-            message: 'An area to list tech, collaborators, 3rd party assets:',
+            message: 'An area to list tech or 3rd party assets:',
         },
         {
             type: 'input',
             name: 'contributors',
-            message: 'Contributors',
+            message: 'Contributors:',
         },
         {
             type: 'input',
