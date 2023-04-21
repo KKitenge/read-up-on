@@ -31,7 +31,7 @@ Javascript can seem like learning a new language and with Nodejs, it felt like c
 
 
 ## License
-MIT License
+[MIT](https://opensource.org/license/mit/) License
 
 
 ## Author Info
