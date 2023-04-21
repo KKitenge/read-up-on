@@ -54,6 +54,7 @@ ${renderLicenseBadge(response.license)}
   
 ## Table of Contents 📜  
 ${response.contents}
+
 * [Installation](#installation)
 * [Usage](#usage)
 * [Tests](#tests)
@@ -141,7 +142,7 @@ const questions =
             message: 'Enter your email address:',
         },
         {
-            type: 'list', //type list, to give choices
+            type: 'list',
             name: 'license',
             message: 'Which license are you using?',
             choices: ['MIT', 'Apache', 'Mozilla', 'Eclipse', 'None'],
