@@ -19,6 +19,7 @@ Application to help users create a professionally sound README file for their pr
 
 ## Usage
 In the terminal, run node index.js and answer a set of questions within a prompt. The answers are logged and a README file is generated.
+[Video link](https://app.screencast.com/6xJXsqawwr5QY)
 
 ## Learning Points
 Javascript can seem like learning a new language and with Nodejs, it felt like conjugating verbs. Template literals factored into this project and that was an interesting aspect - getting used to and knowing how and where to use them.
