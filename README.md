@@ -5,8 +5,9 @@ Application to help users create a professionally sound README file for their pr
 
 
 ## Table of Contents
-* [Usage](#usage)
 * [Technology Used](#technology-used)
+* [Usage](#usage)
+* [Learning Points](#learning-points)
 * [Credits](#credits)
 * [License](#License)
 
