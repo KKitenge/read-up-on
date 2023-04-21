@@ -63,6 +63,9 @@ function generateMarkdown(response) {
 
 ## Contributors 👯
     ${response.contributors}
+
+## Status
+    ${response.status}
   
 ## License 🖋️
     ${response.license}`
